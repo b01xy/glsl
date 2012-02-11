@@ -1,0 +1,72 @@
+#N canvas 660 341 830 589 10;
+#X obj 21 84 gemwin 50;
+#X msg 21 20 create \, 1;
+#X msg 36 48 destroy \, 0;
+#X obj 199 -96 gemhead;
+#X obj 198 37 rotateXYZ;
+#X obj 198 76 GEMglEnable;
+#X obj 198 109 GEMglCullFace;
+#X obj 198 146 GEMglColor4f 1 0 0 1;
+#X obj 198 189 square 0.2;
+#X obj 198 236 GEMglCullFace;
+#X obj 198 318 square 0.2;
+#X obj 198 275 GEMglColor4f 0 1 0 1;
+#X obj 349 15 GLdefine GL_CULL_FACE;
+#X obj 352 83 GLdefine GL_BACK;
+#X obj 393 171 GLdefine GL_FRONT;
+#X obj 349 -6 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 352 57 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 392 145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 462 -22 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 464 -65 loadbang;
+#X text 374 -97 initialiser chaque objet Gem pour éviter GL : invalid
+enumerant;
+#X obj 265 -84 f;
+#X obj 265 -53 t f f;
+#X obj 309 -76 + 180;
+#X msg 230 -28 \$1 1000;
+#X obj 230 -5 line;
+#X obj 232 16 % 360;
+#X obj 270 -114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 198 352 GEMglDisable;
+#X text 198 -177 Gem marche par état \, c'est comme des balises \,
+il faut aussi fermer avec GEMGlDisable sinon d'autres objets GEM issus
+d'un autre patch seraient invisibles;
+#X text 124 72 on ouvre;
+#X text 391 39 on définit la fonction;
+#X text 126 354 on ferme;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 11 0;
+#X connect 10 0 28 0;
+#X connect 11 0 10 0;
+#X connect 12 0 5 1;
+#X connect 12 0 28 1;
+#X connect 13 0 6 1;
+#X connect 14 0 9 1;
+#X connect 15 0 12 0;
+#X connect 16 0 13 0;
+#X connect 17 0 14 0;
+#X connect 18 0 15 0;
+#X connect 18 0 16 0;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 21 0 22 0;
+#X connect 22 0 24 0;
+#X connect 22 1 23 0;
+#X connect 23 0 21 1;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 26 0 4 1;
+#X connect 27 0 21 0;
