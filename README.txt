@@ -10,7 +10,7 @@ Exemples_GLSL/
 - d'échanges sur le forum codelab.fr, du portage de shaders provenant de sources diverses (voir http://codelab.fr/2897)
 
 Customs/
-- de créations artisanales perpétrées par mes soins
+- de créations artisanales
 
 Benjamin
 
