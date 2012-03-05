@@ -1,0 +1,24 @@
+#N canvas 552 38 353 267 10;
+#X obj 86 28 gemhead;
+#X msg 230 129 mode \$1;
+#X msg 227 176 quality 1;
+#X obj 229 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 228 152 loadbang;
+#X obj 76 177 pix_texture;
+#X obj 79 208 rectangle 4 4;
+#X floatatom 207 58 5 0 0 0 - - -;
+#X obj 77 149 pix_video;
+#X msg 206 84 scale \$1;
+#X obj 5 -9 a_gemwin;
+#X obj 80 115 a_shad pixelate;
+#X connect 0 0 11 0;
+#X connect 1 0 5 0;
+#X connect 2 0 5 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 7 0 9 0;
+#X connect 8 0 5 0;
+#X connect 9 0 11 1;
+#X connect 11 0 8 0;

@@ -1,0 +1,174 @@
+#N canvas 447 274 678 308 10;
+#N canvas 264 34 721 653 menu 0;
+#X msg 363 625 \; pd open \$1 \$2;
+#X obj 408 535 getdir;
+#X obj 363 577 pack s s;
+#X obj 359 502 t b a b;
+#X obj 217 575 makefilename pd-%s;
+#X msg 217 598 \; \$1 menuclose \;;
+#X obj 217 517 symbol;
+#X obj 105 142 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 281 428 sel 0 1;
+#X text 103 122 Effets vidéos;
+#X text 121 142 black and white;
+#X obj 105 160 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 121 162 bloom;
+#X msg -123 55 0_bandw-help.pd;
+#X obj -150 32 t a b;
+#X obj 251 428 l2s;
+#X obj 343 475 symbol;
+#X obj -148 77 t a b;
+#X obj 105 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 122 181 led;
+#X msg -121 100 0_bloom-help.pd;
+#X obj -143 130 t a b;
+#X obj 105 197 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 121 199 lighttunnel;
+#X obj -138 181 t a b;
+#X msg -116 153 0_led-help.pd;
+#X msg -111 204 0_lighttunnel-help.pd;
+#X obj 105 216 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 122 217 pixelate;
+#X obj -137 232 t a b;
+#X msg -110 255 0_pixelate-help.pd;
+#X obj 105 235 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 121 236 convolution-sobel;
+#X obj -138 280 t a b;
+#X msg -111 303 0_sobel-help.pd;
+#X obj 105 254 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 121 256 stretch;
+#X obj -145 329 t a b;
+#X msg -118 352 0_stretch-help.pd;
+#X obj -156 360 t a b;
+#X obj 105 273 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 122 275 threshhold;
+#X msg -129 383 0_threshhold-help.pd;
+#X obj -146 432 t a b;
+#X obj 259 245 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 276 246 noise3D;
+#X obj 259 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 276 265 sphere3D;
+#X obj -138 482 t a b;
+#X msg -119 455 1_noise3D-help.pd;
+#X msg -111 505 1_sphere3D-help.pd;
+#X text 272 118 texture/graphisme;
+#X obj 258 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 274 140 badprint;
+#X obj 405 139 t a b;
+#X obj 258 159 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 274 159 brick;
+#X obj 408 187 t a b;
+#X obj 258 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 404 232 t a b;
+#X text 274 178 julia (fractal);
+#X obj 258 198 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 403 278 t a b;
+#X text 274 198 mandel (fractal);
+#X text 258 227 morphing 3D;
+#X msg 432 162 2_badprint-help.pd;
+#X msg 435 210 2_brick-help.pd;
+#X msg 431 254 2_julia-help.pd;
+#X msg 430 300 2_mandel-help.pd;
+#X connect 1 0 2 1;
+#X connect 2 0 0 0;
+#X connect 3 1 2 0;
+#X connect 3 2 1 0;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
+#X connect 7 0 14 0;
+#X connect 8 0 6 0;
+#X connect 8 1 16 0;
+#X connect 11 0 17 0;
+#X connect 13 0 15 0;
+#X connect 14 0 8 0;
+#X connect 14 1 13 0;
+#X connect 15 0 6 1;
+#X connect 15 0 16 1;
+#X connect 16 0 3 0;
+#X connect 17 0 8 0;
+#X connect 17 1 20 0;
+#X connect 18 0 21 0;
+#X connect 20 0 15 0;
+#X connect 21 0 8 0;
+#X connect 21 1 25 0;
+#X connect 22 0 24 0;
+#X connect 24 0 8 0;
+#X connect 24 1 26 0;
+#X connect 25 0 15 0;
+#X connect 26 0 15 0;
+#X connect 27 0 29 0;
+#X connect 29 0 8 0;
+#X connect 29 1 30 0;
+#X connect 30 0 15 0;
+#X connect 31 0 33 0;
+#X connect 33 0 8 0;
+#X connect 33 1 34 0;
+#X connect 34 0 15 0;
+#X connect 35 0 37 0;
+#X connect 37 0 8 0;
+#X connect 37 1 38 0;
+#X connect 38 0 15 0;
+#X connect 39 0 8 0;
+#X connect 39 1 42 0;
+#X connect 40 0 39 0;
+#X connect 42 0 15 0;
+#X connect 43 0 8 0;
+#X connect 43 1 49 0;
+#X connect 44 0 43 0;
+#X connect 46 0 48 0;
+#X connect 48 0 8 0;
+#X connect 48 1 50 0;
+#X connect 49 0 15 0;
+#X connect 50 0 15 0;
+#X connect 52 0 54 0;
+#X connect 54 0 8 0;
+#X connect 54 1 65 0;
+#X connect 55 0 57 0;
+#X connect 57 0 8 0;
+#X connect 57 1 66 0;
+#X connect 58 0 59 0;
+#X connect 59 0 8 0;
+#X connect 59 1 67 0;
+#X connect 61 0 62 0;
+#X connect 62 0 8 0;
+#X connect 62 1 68 0;
+#X connect 65 0 15 0;
+#X connect 66 0 15 0;
+#X connect 67 0 15 0;
+#X connect 68 0 15 0;
+#X coords 0 -1 1 1 300 200 1 100 100;
+#X restore 5 -33 pd menu;
+#X obj 323 153 a_cons 0_0_DEBUT.pd;
+#X text 317 49 Cet abstract permet rapidement de créer les différentes
+variables interagissantavec le [glsl-program];
+#X text 318 79 1/ Créer l'abstract avec l'appel de l'adresse du patche
+xxx.pd;
+#X text 320 106 2/ Entrer le nom de la variable suivi du nombre d'inlet
+: width 4 !!! attention il y a un bug pour le premier abstract de chaque
+incrémentation d'inlet;
+#X text 315 -39 Pour créer un shader \, il suffit de créer l'abstract
+[a_shad] avec en variable le nom des scripts frag/vert [a_shad bloom]
+;
+#X obj 323 13 a_shad bloom;
+#N canvas 55 223 386 136 info 0;
+#X text 12 2 Cette librairie d'effets GLSL permet rapidement de créer
+des patches pour des effets videos;
+#X text 14 30 Toutes les licences des scripts on été laissées quand
+elles apparaissaient.;
+#X text 16 61 L'adaptation des scripts et les abstracts puredata ont
+été créées par Philippe Boisnard - 2011 @ databaz;
+#X restore 259 174 pd info;
